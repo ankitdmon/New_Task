@@ -4,6 +4,10 @@ require('dotenv').config();
 
 const mongoose = require('mongoose');
 
+const Employee = require('./models/Employee');
+
+console.log('Employee Model Fields:', Employee.schema.obj);
+
 // Middleware
 app.use(express.json());
 
