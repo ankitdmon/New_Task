@@ -19,10 +19,6 @@ const employeeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  DOB: {
-    type: Date,
-    required: true,
-  },
   profilePic: {
     type: String,
   },

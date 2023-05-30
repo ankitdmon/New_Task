@@ -10,6 +10,11 @@ const Review = require('./models/Review');
 console.log('Employee Model Fields:', Employee.schema.obj);
 console.log('Employee Model Fields:', Review.schema.obj);
 
+// Routes
+app.get('/', (req,res)=> {
+  res.json({message: "Hello World!!"})
+})
+
 // Middleware
 app.use(express.json());
 
