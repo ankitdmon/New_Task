@@ -18,6 +18,10 @@ const employeeSchema = new mongoose.Schema({
   mobile: {
     type: String,
     required: true,
+    unique: true,
+  },
+  DOB: {
+    type: Date,
   },
   profilePic: {
     type: String,

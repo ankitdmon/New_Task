@@ -21,7 +21,6 @@ const reviewSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-    // Other reviewer fields
   },
   feedback: {
     type: String,

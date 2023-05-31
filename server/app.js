@@ -4,19 +4,23 @@ require('dotenv').config();
 
 const mongoose = require('mongoose');
 
+const index = require('./router/index')
+
 const Employee = require('./models/Employee');
 const Review = require('./models/Review');
 
 console.log('Employee Model Fields:', Employee.schema.obj);
 console.log('Employee Model Fields:', Review.schema.obj);
 
-// Routes
-app.get('/', (req,res)=> {
-  res.json({message: "Hello World!!"})
-})
-
 // Middleware
-app.use(express.json());
+app.use(express.json()); // Place this middleware above the route definitions
+
+// Routes
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello World!!' })
+});
+
+app.use("/", index);
 
 // Start the server
 const PORT = process.env.PORT || 5000;

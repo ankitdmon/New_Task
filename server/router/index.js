@@ -1,7 +1,10 @@
 const express = require('express');
-const router = express.Router();
+const app = express();
 const adminRouter = require('./admin');
+const employeeRouter = require('./employee')
 
-router.use('/admin', adminRouter);
+app.use('/admin', adminRouter);
+app.use('/employee', employeeRouter)
 
-module.exports = router;
+
+module.exports = app;
